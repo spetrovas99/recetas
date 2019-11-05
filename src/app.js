@@ -30,7 +30,7 @@ const resolvers={
     Mutation:{
         addAutor:(parent,args,ctx,info)=>{
            // const{name,email} = args;
-            if(authorData.some(obj => obj.email === email)){
+            if(autorData.some(obj => obj.email === email)){
                 throw new Error (`user email ${email} already in use`);
             }
             const autor = {
@@ -38,7 +38,7 @@ const resolvers={
                 email : args.email,
                 id: uuid.v4()
             };
-            authorData.push(autor);
+            autorData.push(autor);
             return autor;
         }
     }
